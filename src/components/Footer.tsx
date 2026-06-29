@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Heart, Mail, Phone, MapPin, Globe2, Share2, MessageCircle, ExternalLink, Rss } from "lucide-react";
-import LogoMark from "@/components/LogoMark";
 
 const footerLinks = {
   Organization: [
@@ -68,7 +68,13 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-5" aria-label="Care Bora Kenya — home">
-              <LogoMark variant="white" size={40} />
+              <Image
+                src="/logo-mark-white.png"
+                alt="Care Bora Kenya mark"
+                width={256}
+                height={181}
+                className="h-10 w-auto"
+              />
               <span className="font-display text-xl font-bold text-white">
                 Care Bora Kenya
               </span>

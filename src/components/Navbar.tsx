@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import LogoMark from "@/components/LogoMark";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -49,9 +49,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group" aria-label="Care Bora Kenya — home">
-            <LogoMark
-              variant={scrolled || !isHome ? "green" : "white"}
-              size={44}
+            <Image
+              src={scrolled || !isHome ? "/logo-mark.png" : "/logo-mark-white.png"}
+              alt="Care Bora Kenya mark"
+              width={256}
+              height={181}
+              className="h-11 w-auto"
+              priority
             />
             <div>
               <div
