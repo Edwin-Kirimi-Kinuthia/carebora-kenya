@@ -194,6 +194,15 @@ body.diag-cv section {
   content-visibility: auto;
   contain-intrinsic-size: auto 700px;
 }
+/* Neutralize framer-motion inline transforms — chiefly the hero scroll parallax,
+   a live transform layer that updates every scroll frame. Tailwind transform
+   UTILITIES use classes (not inline style) so they are unaffected. */
+body.diag-noxform [style*="transform"] {
+  transform: none !important;
+}
+body.diag-noxform [style*="opacity"] {
+  opacity: 1 !important;
+}
 /* Disable the dotted radial-gradient backgrounds (paint-heavy on tall pages) */
 body.diag-nodots .gradient-hero,
 body.diag-nodots .bg-dots-dark,
