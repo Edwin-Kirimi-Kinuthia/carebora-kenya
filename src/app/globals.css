@@ -150,67 +150,23 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(to right, transparent, #006B3F, #C8902E, #006B3F, transparent);
 }
 
-/* ── Diagnostic toggles (temporary) — strip GPU-heavy features via ?diag= ── */
-/* Remove ALL backdrop-filter site-wide (navbar, glass badges, stat cards) */
-body.diag-noblur *,
-body.diag-noblur *::before,
-body.diag-noblur *::after {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-/* Remove background-clip:text gradient text → solid color */
-body.diag-notext .text-gradient-gold {
-  background: none !important;
-  -webkit-text-fill-color: #C8902E !important;
-  color: #C8902E !important;
-}
-body.diag-notext .text-gradient-green {
-  background: none !important;
-  -webkit-text-fill-color: #00834B !important;
-  color: #00834B !important;
-}
-/* Remove all filter and backdrop-filter (most aggressive) */
-body.diag-flat *,
-body.diag-flat *::before,
-body.diag-flat *::after {
-  filter: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-/* Kill CSS animations/transitions (pairs with framer reducedMotion via ?diag=nomotion) */
-body.diag-nomotion *,
-body.diag-nomotion *::before,
-body.diag-nomotion *::after {
-  animation: none !important;
-  transition: none !important;
-}
-/* Hide all images to rule out next/image GPU texture memory */
-body.diag-noimg img {
-  visibility: hidden !important;
-}
-/* content-visibility: only render/composite on-screen sections. The real fix
-   for corruption caused by the full page composited as one over-tall layer. */
-body.diag-cv section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 700px;
-}
-/* Neutralize framer-motion inline transforms — chiefly the hero scroll parallax,
-   a live transform layer that updates every scroll frame. Tailwind transform
-   UTILITIES use classes (not inline style) so they are unaffected. */
-body.diag-noxform [style*="transform"] {
-  transform: none !important;
-}
-body.diag-noxform [style*="opacity"] {
-  opacity: 1 !important;
-}
-/* Disable the dotted radial-gradient backgrounds (paint-heavy on tall pages) */
-body.diag-nodots .gradient-hero,
-body.diag-nodots .bg-dots-dark,
-body.diag-nodots .bg-dots-green,
-body.diag-nodots .bg-dots-green-light,
-body.diag-nodots .bg-dots-gradient-emerald,
-body.diag-nodots .pattern-dots {
-  background-image: none !important;
+/* ── Mobile GPU corruption fix ──────────────────────────────────────────────
+   Root cause (confirmed by /gpu-test bisection in the eleven-stars-fc repo on
+   this same device): the GPU renders rainbow/pixel static on any card that has
+   BOTH a 1px translucent border AND an inline SVG icon. Removing either is
+   clean — translucency, gradients, blur, animations, dot patterns and page
+   height were all innocent. Our glitching cards (Ethical Principles on home +
+   about, the impact stat cards, etc.) are exactly `bg-white/X border
+   border-white/X` wrapping a lucide icon.
+
+   Fix: on phones, drop the decorative border on translucent white cards. They
+   are selected by having BOTH a translucent white surface and a translucent
+   white border, which excludes outline buttons (border-2, no bg-white) and form
+   inputs (border-gray). The bg-white surface still defines the card. */
+@media (max-width: 820px) {
+  [class*="bg-white/"][class*="border-white/"] {
+    border-style: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

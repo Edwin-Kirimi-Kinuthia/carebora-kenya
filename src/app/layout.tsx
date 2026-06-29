@@ -3,8 +3,6 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import DiagToggle from "@/components/DiagToggle";
-import MotionWrapper from "@/components/MotionWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,12 +43,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
-        <DiagToggle />
-        <MotionWrapper>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </MotionWrapper>
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
