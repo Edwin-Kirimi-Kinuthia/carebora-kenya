@@ -177,6 +177,17 @@ body.diag-flat *::after {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
+/* Kill CSS animations/transitions (pairs with framer reducedMotion via ?diag=nomotion) */
+body.diag-nomotion *,
+body.diag-nomotion *::before,
+body.diag-nomotion *::after {
+  animation: none !important;
+  transition: none !important;
+}
+/* Hide all images to rule out next/image GPU texture memory */
+body.diag-noimg img {
+  visibility: hidden !important;
+}
 /* Disable the dotted radial-gradient backgrounds (paint-heavy on tall pages) */
 body.diag-nodots .gradient-hero,
 body.diag-nodots .bg-dots-dark,
