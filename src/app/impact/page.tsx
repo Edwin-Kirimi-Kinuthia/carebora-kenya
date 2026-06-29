@@ -78,7 +78,7 @@ const stories = [
     stat: "35% reduction in maternal mortality",
   },
   {
-    img: "https://images.unsplash.com/photo-1603703182693-51a19941fa59?w=600&q=80",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Health_camp_%40UG.jpg/960px-Health_camp_%40UG.jpg",
     county: "Nairobi County",
     title: "Youth Health Champions Network",
     story:

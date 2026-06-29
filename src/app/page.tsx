@@ -15,8 +15,9 @@ function useCountUp(target: number, running: boolean, duration = 2000) {
   useEffect(() => {
     if (!running) return;
     let raf: number;
-    const start = performance.now();
+    let start = -1;
     const step = (now: number) => {
+      if (start < 0) start = now; // use rAF timestamp to avoid negative p
       const p = Math.min((now - start) / duration, 1);
       const ease = 1 - Math.pow(1 - p, 3);
       setValue(Math.round(ease * target));
@@ -607,10 +608,10 @@ export default function Home() {
                   i === activeTestimonial && (
                     <motion.div
                       key={t.name}
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -50 }}
-                      transition={{ duration: 0.45, ease: "easeOut" }}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
                       className="bg-white rounded-3xl p-8 sm:p-12 shadow-lg border border-gray-100"
                     >
                       <Quote className="w-10 h-10 text-kenya-gold mb-6" />
