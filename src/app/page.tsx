@@ -220,9 +220,9 @@ export default function Home() {
       >
         {/* Atmospheric orbs */}
         <motion.div style={{ y: heroY }} className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-kenya-green/20 blur-[120px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-kenya-gold/15 blur-[100px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-emerald-900/30 blur-[140px]" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 orb-green-20" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 orb-gold-15" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] orb-dark-30" />
         </motion.div>
 
         {/* Kenya flag accent stripe */}
@@ -520,8 +520,8 @@ export default function Home() {
       {/* ══ IMPACT NUMBERS ═══════════════════════════════════════ */}
       <section className="py-28 bg-kenya-green relative overflow-hidden">
         <div className="absolute inset-0 pattern-dots" />
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-emerald-500/10 blur-[100px]" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-kenya-gold/10 blur-[80px]" />
+        <div className="absolute top-0 right-0 w-96 h-96 orb-emerald-10" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 orb-gold-10" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center mb-14">
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/15 text-emerald-200 text-sm font-bold uppercase tracking-widest mb-4">
@@ -657,7 +657,7 @@ export default function Home() {
       {/* ══ ETHICAL COMMITMENT ═══════════════════════════════════ */}
       <section className="py-28 bg-kenya-dark relative overflow-hidden">
         <div className="absolute inset-0 pattern-dots opacity-50" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-kenya-green/10 blur-[100px]" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 orb-green-10" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
@@ -715,8 +715,8 @@ export default function Home() {
           <FadeIn>
             <div className="bg-gradient-to-br from-kenya-green via-emerald-700 to-kenya-dark rounded-3xl p-12 sm:p-16 relative overflow-hidden">
               <div className="absolute inset-0 pattern-dots" />
-              <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-kenya-gold/20 blur-[80px]" />
-              <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-emerald-400/10 blur-[80px]" />
+              <div className="absolute -top-20 -right-20 w-60 h-60 orb-gold-20" />
+              <div className="absolute -bottom-20 -left-20 w-60 h-60 orb-emerald-10" />
               <div className="relative z-10">
                 <div className="text-5xl mb-6">🌍</div>
                 <h2 className="font-display text-3xl sm:text-5xl font-bold text-white mb-4">

@@ -88,8 +88,8 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className="relative pt-36 pb-24 gradient-hero overflow-hidden">
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-kenya-green/20 blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-kenya-gold/15 blur-[100px]" />
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 orb-green-20" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 orb-gold-15" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

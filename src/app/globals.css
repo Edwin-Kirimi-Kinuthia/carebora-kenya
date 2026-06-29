@@ -107,6 +107,15 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 24px 24px;
 }
 
+/* Decorative ambient orbs — radial gradients replace filter:blur() to avoid GPU compositing artifacts on mobile */
+.orb-green-20 { background: radial-gradient(circle, rgba(0,107,63,0.20) 0%, transparent 70%); }
+.orb-green-10 { background: radial-gradient(circle, rgba(0,107,63,0.10) 0%, transparent 70%); }
+.orb-gold-20  { background: radial-gradient(circle, rgba(200,144,46,0.20) 0%, transparent 70%); }
+.orb-gold-15  { background: radial-gradient(circle, rgba(200,144,46,0.15) 0%, transparent 70%); }
+.orb-gold-10  { background: radial-gradient(circle, rgba(200,144,46,0.10) 0%, transparent 70%); }
+.orb-dark-30  { background: radial-gradient(circle, rgba(6,78,59,0.30) 0%, transparent 70%); }
+.orb-emerald-10 { background: radial-gradient(circle, rgba(16,185,129,0.10) 0%, transparent 70%); }
+
 .section-divider {
   height: 2px;
   background: linear-gradient(to right, transparent, #006B3F, #C8902E, #006B3F, transparent);

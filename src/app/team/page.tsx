@@ -95,8 +95,8 @@ export default function TeamPage() {
     <>
       {/* Hero */}
       <section className="relative pt-36 pb-24 gradient-hero overflow-hidden">
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-kenya-gold/10 blur-[120px]" />
-        <div className="absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-kenya-green/20 blur-[100px]" />
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 orb-gold-10" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 orb-green-20" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -258,7 +258,7 @@ export default function TeamPage() {
       {/* Join team CTA */}
       <section className="py-24 bg-kenya-green relative overflow-hidden">
         <div className="absolute inset-0 pattern-dots" />
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-kenya-gold/10 blur-[100px]" />
+        <div className="absolute top-0 right-0 w-96 h-96 orb-gold-10" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
