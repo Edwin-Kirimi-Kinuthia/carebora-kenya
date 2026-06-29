@@ -150,6 +150,43 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(to right, transparent, #006B3F, #C8902E, #006B3F, transparent);
 }
 
+/* ── Diagnostic toggles (temporary) — strip GPU-heavy features via ?diag= ── */
+/* Remove ALL backdrop-filter site-wide (navbar, glass badges, stat cards) */
+body.diag-noblur *,
+body.diag-noblur *::before,
+body.diag-noblur *::after {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* Remove background-clip:text gradient text → solid color */
+body.diag-notext .text-gradient-gold {
+  background: none !important;
+  -webkit-text-fill-color: #C8902E !important;
+  color: #C8902E !important;
+}
+body.diag-notext .text-gradient-green {
+  background: none !important;
+  -webkit-text-fill-color: #00834B !important;
+  color: #00834B !important;
+}
+/* Remove all filter and backdrop-filter (most aggressive) */
+body.diag-flat *,
+body.diag-flat *::before,
+body.diag-flat *::after {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* Disable the dotted radial-gradient backgrounds (paint-heavy on tall pages) */
+body.diag-nodots .gradient-hero,
+body.diag-nodots .bg-dots-dark,
+body.diag-nodots .bg-dots-green,
+body.diag-nodots .bg-dots-green-light,
+body.diag-nodots .bg-dots-gradient-emerald,
+body.diag-nodots .pattern-dots {
+  background-image: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
