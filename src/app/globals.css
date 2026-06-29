@@ -188,6 +188,12 @@ body.diag-nomotion *::after {
 body.diag-noimg img {
   visibility: hidden !important;
 }
+/* content-visibility: only render/composite on-screen sections. The real fix
+   for corruption caused by the full page composited as one over-tall layer. */
+body.diag-cv section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
+}
 /* Disable the dotted radial-gradient backgrounds (paint-heavy on tall pages) */
 body.diag-nodots .gradient-hero,
 body.diag-nodots .bg-dots-dark,
