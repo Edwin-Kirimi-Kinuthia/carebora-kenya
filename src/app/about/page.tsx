@@ -250,8 +250,7 @@ export default function AboutPage() {
       </section>
 
       {/* Ethical Principles */}
-      <section className="py-24 bg-kenya-dark relative overflow-hidden">
-        <div className="absolute inset-0 pattern-dots opacity-50" />
+      <section className="py-24 bg-dots-dark relative overflow-hidden">
         <div className="absolute -top-32 right-0 w-96 h-96 orb-green-10" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

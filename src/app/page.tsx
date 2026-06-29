@@ -518,8 +518,7 @@ export default function Home() {
       </section>
 
       {/* ══ IMPACT NUMBERS ═══════════════════════════════════════ */}
-      <section className="py-28 bg-kenya-green relative overflow-hidden">
-        <div className="absolute inset-0 pattern-dots" />
+      <section className="py-28 bg-dots-green relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 orb-emerald-10" />
         <div className="absolute bottom-0 left-0 w-80 h-80 orb-gold-10" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -655,8 +654,7 @@ export default function Home() {
       </section>
 
       {/* ══ ETHICAL COMMITMENT ═══════════════════════════════════ */}
-      <section className="py-28 bg-kenya-dark relative overflow-hidden">
-        <div className="absolute inset-0 pattern-dots opacity-50" />
+      <section className="py-28 bg-dots-dark relative overflow-hidden">
         <div className="absolute -top-32 -right-32 w-96 h-96 orb-green-10" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -713,8 +711,7 @@ export default function Home() {
       <section className="py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            <div className="bg-gradient-to-br from-kenya-green via-emerald-700 to-kenya-dark rounded-3xl p-12 sm:p-16 relative overflow-hidden">
-              <div className="absolute inset-0 pattern-dots" />
+            <div className="bg-dots-gradient-emerald rounded-3xl p-12 sm:p-16 relative overflow-hidden">
               <div className="absolute -top-20 -right-20 w-60 h-60 orb-gold-20" />
               <div className="absolute -bottom-20 -left-20 w-60 h-60 orb-emerald-10" />
               <div className="relative z-10">

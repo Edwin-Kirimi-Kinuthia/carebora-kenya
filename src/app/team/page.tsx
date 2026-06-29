@@ -256,8 +256,7 @@ export default function TeamPage() {
       </section>
 
       {/* Join team CTA */}
-      <section className="py-24 bg-kenya-green relative overflow-hidden">
-        <div className="absolute inset-0 pattern-dots" />
+      <section className="py-24 bg-dots-green relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 orb-gold-10" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>

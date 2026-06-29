@@ -323,8 +323,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* Quick stats strip */}
-      <section className="py-16 bg-kenya-green relative overflow-hidden">
-        <div className="absolute inset-0 pattern-dots" />
+      <section className="py-16 bg-dots-green relative overflow-hidden">
         <div className="relative max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-white">
           {[
             { n: "5", label: "Strategic Pillars" },

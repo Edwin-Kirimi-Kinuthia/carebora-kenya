@@ -259,8 +259,7 @@ export default function ImpactPage() {
       </section>
 
       {/* Quote */}
-      <section className="py-20 bg-kenya-dark relative overflow-hidden">
-        <div className="absolute inset-0 pattern-dots opacity-40" />
+      <section className="py-20 bg-dots-dark relative overflow-hidden">
         <div className="relative max-w-3xl mx-auto px-4 text-center">
           <FadeIn>
             <Quote className="w-12 h-12 text-kenya-gold mx-auto mb-6" />
