@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import LogoMark from "@/components/LogoMark";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -47,10 +48,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 rounded-full bg-gradient-to-br from-kenya-green to-emerald-500 flex items-center justify-center shadow-lg group-hover:shadow-kenya-green/40 transition-shadow duration-300 pulse-dot">
-              <Heart className="w-5 h-5 text-white fill-white" />
-            </div>
+          <Link href="/" className="flex items-center gap-3 group" aria-label="Care Bora Kenya — home">
+            <LogoMark
+              variant={scrolled || !isHome ? "green" : "white"}
+              size={44}
+            />
             <div>
               <div
                 className={`font-display font-bold text-lg leading-tight tracking-tight transition-colors duration-300 ${
