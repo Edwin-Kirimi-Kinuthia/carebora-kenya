@@ -79,8 +79,8 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative pt-36 pb-20 gradient-hero overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/4 w-96 h-96 orb-green-20" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 orb-gold-15" />
+          <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-kenya-green/20 blur-[120px]" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-kenya-gold/15 blur-[100px]" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -250,8 +250,9 @@ export default function AboutPage() {
       </section>
 
       {/* Ethical Principles */}
-      <section className="py-24 bg-dots-dark relative overflow-hidden">
-        <div className="absolute -top-32 right-0 w-96 h-96 orb-green-10" />
+      <section className="py-24 bg-kenya-dark relative overflow-hidden">
+        <div className="absolute inset-0 pattern-dots opacity-50" />
+        <div className="absolute -top-32 right-0 w-96 h-96 rounded-full bg-kenya-green/10 blur-[100px]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>

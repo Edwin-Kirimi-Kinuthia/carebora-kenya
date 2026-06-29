@@ -107,44 +107,6 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 24px 24px;
 }
 
-/* Dot-textured backgrounds — pattern baked into the element's own background-image
-   instead of a separate absolute opacity overlay. A full-section overlay div (esp.
-   with opacity) forces a compositing layer that, stacked over animated children,
-   exceeds the GPU texture limit on Android Chrome and corrupts (pixel-garbage
-   streaks). Baking the dots in — like .gradient-hero does — paints with no extra
-   layer and renders cleanly on mobile. */
-.bg-dots-dark {
-  background-color: var(--color-kenya-dark);
-  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-.bg-dots-green {
-  background-color: var(--color-kenya-green);
-  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-.bg-dots-green-light {
-  background-color: var(--color-kenya-green-light);
-  background-image: radial-gradient(circle, rgba(0,107,63,0.10) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-.bg-dots-gradient-emerald {
-  background-image:
-    radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(135deg, #006B3F 0%, #047857 55%, #0D1F14 100%);
-  background-size: 24px 24px, cover;
-  background-color: #006B3F;
-}
-
-/* Decorative ambient orbs — radial gradients replace filter:blur() to avoid GPU compositing artifacts on mobile */
-.orb-green-20 { background: radial-gradient(circle, rgba(0,107,63,0.20) 0%, transparent 70%); }
-.orb-green-10 { background: radial-gradient(circle, rgba(0,107,63,0.10) 0%, transparent 70%); }
-.orb-gold-20  { background: radial-gradient(circle, rgba(200,144,46,0.20) 0%, transparent 70%); }
-.orb-gold-15  { background: radial-gradient(circle, rgba(200,144,46,0.15) 0%, transparent 70%); }
-.orb-gold-10  { background: radial-gradient(circle, rgba(200,144,46,0.10) 0%, transparent 70%); }
-.orb-dark-30  { background: radial-gradient(circle, rgba(6,78,59,0.30) 0%, transparent 70%); }
-.orb-emerald-10 { background: radial-gradient(circle, rgba(16,185,129,0.10) 0%, transparent 70%); }
-
 .section-divider {
   height: 2px;
   background: linear-gradient(to right, transparent, #006B3F, #C8902E, #006B3F, transparent);
