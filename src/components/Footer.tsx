@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Heart, Mail, Phone, MapPin, Globe2, Share2, MessageCircle, ExternalLink, Rss } from "lucide-react";
+import LogoMark from "@/components/LogoMark";
 
 const footerLinks = {
   Organization: [
@@ -23,11 +24,11 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: Globe2, href: "#", label: "Facebook" },
-  { icon: Share2, href: "#", label: "Twitter/X" },
-  { icon: MessageCircle, href: "#", label: "Instagram" },
-  { icon: ExternalLink, href: "#", label: "LinkedIn" },
-  { icon: Rss, href: "#", label: "YouTube" },
+  { icon: Globe2,       href: "https://www.facebook.com/share/1GneyXiB15/",   label: "Facebook"  },
+  { icon: MessageCircle,href: "https://www.instagram.com/carebora_ke/",        label: "Instagram" },
+  { icon: Share2,       href: "#",                                              label: "Twitter/X" },
+  { icon: ExternalLink, href: "#",                                              label: "LinkedIn"  },
+  { icon: Rss,          href: "#",                                              label: "YouTube"   },
 ];
 
 export default function Footer() {
@@ -66,10 +67,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-kenya-green to-emerald-500 flex items-center justify-center">
-                <Heart className="w-5 h-5 text-white fill-white" />
-              </div>
+            <Link href="/" className="flex items-center gap-3 mb-5" aria-label="Care Bora Kenya — home">
+              <LogoMark variant="white" size={40} />
               <span className="font-display text-xl font-bold text-white">
                 Care Bora Kenya
               </span>
@@ -123,13 +122,19 @@ export default function Footer() {
         {/* Contact info */}
         <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-5">
           {[
-            { icon: MapPin, text: "Nairobi, Kenya" },
-            { icon: Mail, text: "info@careborakenyza.org" },
-            { icon: Phone, text: "+254 700 000 000" },
-          ].map(({ icon: Icon, text }) => (
+            { icon: MapPin,  text: "Nairobi, Kenya" },
+            { icon: Mail,    text: "admin@carebora.co.ke",        href: "mailto:admin@carebora.co.ke" },
+            { icon: Mail,    text: "customercare@carebora.co.ke", href: "mailto:customercare@carebora.co.ke" },
+            { icon: Phone,   text: "+254 791 390 915",            href: "tel:+254791390915" },
+            { icon: Phone,   text: "+254 757 963 762",            href: "tel:+254757963762" },
+          ].map(({ icon: Icon, text, href }) => (
             <div key={text} className="flex items-center gap-3 text-gray-400 text-sm">
               <Icon className="w-4 h-4 text-kenya-green flex-shrink-0" />
-              <span>{text}</span>
+              {href ? (
+                <a href={href} className="hover:text-kenya-gold transition-colors">{text}</a>
+              ) : (
+                <span>{text}</span>
+              )}
             </div>
           ))}
         </div>

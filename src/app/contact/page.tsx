@@ -279,17 +279,23 @@ export default function ContactPage() {
                 </h3>
                 <div className="space-y-5">
                   {[
-                    { icon: MapPin, label: "Address", value: "Nairobi, Kenya\n(Serving all 47 counties)", color: "text-kenya-green", bg: "bg-kenya-green-light" },
-                    { icon: Mail, label: "Email", value: "info@careborakenyza.org", color: "text-blue-600", bg: "bg-blue-50" },
-                    { icon: Phone, label: "Phone", value: "+254 700 000 000", color: "text-kenya-gold", bg: "bg-kenya-gold-light" },
-                  ].map(({ icon: Icon, label, value, color, bg }) => (
-                    <div key={label} className="flex items-start gap-4">
+                    { icon: MapPin, label: "Address",       value: "Nairobi, Kenya\n(Serving all 47 counties)", color: "text-kenya-green", bg: "bg-kenya-green-light", href: undefined },
+                    { icon: Mail,   label: "General",       value: "admin@carebora.co.ke",        color: "text-blue-600",    bg: "bg-blue-50",           href: "mailto:admin@carebora.co.ke" },
+                    { icon: Mail,   label: "Customer Care", value: "customercare@carebora.co.ke", color: "text-blue-600",    bg: "bg-blue-50",           href: "mailto:customercare@carebora.co.ke" },
+                    { icon: Phone,  label: "Phone",         value: "+254 791 390 915",            color: "text-kenya-gold",  bg: "bg-kenya-gold-light",  href: "tel:+254791390915" },
+                    { icon: Phone,  label: "Alternate",     value: "+254 757 963 762",            color: "text-kenya-gold",  bg: "bg-kenya-gold-light",  href: "tel:+254757963762" },
+                  ].map(({ icon: Icon, label, value, color, bg, href }) => (
+                    <div key={value} className="flex items-start gap-4">
                       <div className={`w-10 h-10 rounded-xl ${bg} flex items-center justify-center flex-shrink-0`}>
                         <Icon className={`w-5 h-5 ${color}`} />
                       </div>
                       <div>
                         <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-0.5">{label}</div>
-                        <div className="text-gray-700 text-sm font-medium whitespace-pre-line">{value}</div>
+                        {href ? (
+                          <a href={href} className="text-gray-700 text-sm font-medium hover:text-kenya-green transition-colors whitespace-pre-line">{value}</a>
+                        ) : (
+                          <div className="text-gray-700 text-sm font-medium whitespace-pre-line">{value}</div>
+                        )}
                       </div>
                     </div>
                   ))}
