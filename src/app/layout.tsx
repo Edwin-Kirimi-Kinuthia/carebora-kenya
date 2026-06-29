@@ -96,6 +96,9 @@ export const metadata: Metadata = {
   verification: {
     // Add your Google Search Console verification code here after claiming the site:
     // google: "your-verification-code",
+    other: {
+      "msvalidate.01": "CFD673BE6E5D26009745BEF921E97C4E",
+    },
   },
 };
 
