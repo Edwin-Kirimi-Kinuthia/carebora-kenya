@@ -412,8 +412,8 @@ export default function Home() {
               <div className="relative h-[540px]">
                 <div className="absolute inset-4 rounded-3xl overflow-hidden shadow-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1547496727-11c450fe4e7f?w=800&q=80"
-                    alt="Community healthcare workers"
+                    src="https://www.comesa.int/wp-content/uploads/2021/08/CDC-pic-1024x598.jpg"
+                    alt="COMESA Africa CDC vaccination initiative"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"

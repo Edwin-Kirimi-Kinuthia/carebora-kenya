@@ -70,7 +70,7 @@ function BigStat({ value, suffix, label, sub, icon: Icon, delay, color }: {
 
 const stories = [
   {
-    img: "https://images.unsplash.com/photo-1515658323406-25d61c141a6e?w=600&q=80",
+    img: "https://cdn.standardmedia.co.ke/images/tuesday/wxkra0ityjozmri85b852157d2e94.jpg",
     county: "Kisumu County",
     title: "Maternal Health Breakthrough",
     story:
