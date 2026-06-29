@@ -129,21 +129,21 @@ const testimonials = [
       "Care Bora Kenya transformed our village's understanding of maternal health. The youth health champions were incredible mentors.",
     name: "Aisha Wanjiru",
     role: "Community Health Volunteer, Kisumu",
-    img: "https://randomuser.me/api/portraits/women/44.jpg",
+    img: "https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?w=100&h=100&fit=crop&crop=face&q=80",
   },
   {
     quote:
       "The research programs opened my eyes to evidence-based health interventions. I'm now pursuing a career in public health thanks to CBK.",
     name: "Brian Otieno",
     role: "Youth Health Champion, Nairobi",
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    img: "https://images.unsplash.com/photo-1495603889488-42d1d66e5523?w=100&h=100&fit=crop&crop=face&q=80",
   },
   {
     quote:
       "Their advocacy work has been pivotal in pushing for UHC policy changes at county level. A model for youth-led health organizations.",
     name: "Dr. Grace Muthoni",
     role: "Public Health Officer, Nakuru",
-    img: "https://randomuser.me/api/portraits/women/68.jpg",
+    img: "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=100&h=100&fit=crop&crop=face&q=80",
   },
 ];
 
@@ -411,7 +411,7 @@ export default function Home() {
               <div className="relative h-[540px]">
                 <div className="absolute inset-4 rounded-3xl overflow-hidden shadow-2xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&q=80"
+                    src="https://images.unsplash.com/photo-1547496727-11c450fe4e7f?w=800&q=80"
                     alt="Community healthcare workers"
                     fill
                     className="object-cover"

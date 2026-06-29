@@ -70,7 +70,7 @@ function BigStat({ value, suffix, label, sub, icon: Icon, delay, color }: {
 
 const stories = [
   {
-    img: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1515658323406-25d61c141a6e?w=600&q=80",
     county: "Kisumu County",
     title: "Maternal Health Breakthrough",
     story:
@@ -78,7 +78,7 @@ const stories = [
     stat: "35% reduction in maternal mortality",
   },
   {
-    img: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1603703182693-51a19941fa59?w=600&q=80",
     county: "Nairobi County",
     title: "Youth Health Champions Network",
     story:
@@ -86,7 +86,7 @@ const stories = [
     stat: "50K+ community members reached",
   },
   {
-    img: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1515657834497-26509e295154?w=600&q=80",
     county: "Turkana County",
     title: "Digital Health in Remote Areas",
     story:
